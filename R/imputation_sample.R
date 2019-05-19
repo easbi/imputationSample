@@ -27,7 +27,7 @@ imputation_sample <- function(x, filters, weight_aggregate, weight_col, iter = 1
   }
 
   if (!"flag" %in% colnames(x)) {
-    x$flag <- NA # Create default column for flagging
+    x$flag <- 0 # Create default column for flagging
   } 
   
   x_filtered <- x %>%
