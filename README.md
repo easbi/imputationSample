@@ -55,10 +55,10 @@ sakernas_dummy
 my_filter <- create_filter(NAMA_PROV == "ACEH" | NAMA_PROV == "SUMATERA BARAT", KLASIFIKASI == 1)
 
 #> Memilih sampel acak dari filter yang telah dibuat
-sakernas_dummy <- imputation_sample(x = sakernas_dummy, filters = my_filter, weight_aggregate = 45000, weight_col = Weight_R, iter = 10, flag = "aceh_sumbar_1")
+sakernas_dummy <- imputation_sample(x = sakernas_dummy, filters = my_filter, weight_aggregate = 45000, weight_col = Weight_R, iter = 10, sample_flag = "aceh_sumbar_1")
 
 #> Mengubah kategori sampel terpilih menjadi "Mencari Pekerjaan" dan jenis kegiatan menjadi "Mempersiapkan Usaha"
-sakernas_dummy <- mutate_sample(x = sakernas_dummy, flag = "aceh_sumbar_1", kategori = 1, jenisKegiatan = 2)
+sakernas_dummy <- mutate_sample(x = sakernas_dummy, sample_flag = "aceh_sumbar_1", kategori = 1, jenisKegiatan = 2)
 ```
 ## Bantuan
 Apabila ditemukan bug atau masalah lainnya, silakan kontak 14.8261@stis.ac.id
